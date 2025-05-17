@@ -19,7 +19,8 @@ DROP TABLE IF EXISTS questions;
 CREATE TABLE questions (
     id INT UNSIGNED NOT NULL PRIMARY KEY,
     text VARCHAR(64) NOT NULL,
-    FOREIGN KEY (quiz_id) INT REFERENCES quizzes(id)
+    quiz_id INT UNSIGNED NOT NULL,
+    FOREIGN KEY (quiz_id) REFERENCES quizzes(id)
 );
 
 DROP TABLE IF EXISTS answers;

@@ -1,0 +1,40 @@
+DROP DATABASE IF EXISTS quiz;
+CREATE DATABASE quiz;
+USE quiz;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL PRIMARY KEY,
+    name VARCHAR(32) DEFAULT NULL,
+    password VARCHAR(16) DEFAULT NULL
+);
+
+DROP TABLE IF EXISTS quizzes;
+CREATE TABLE quizzes (
+    id INT UNSIGNED NOT NULL PRIMARY KEY,
+    name VARCHAR(32) NOT NULL
+);
+
+DROP TABLE IF EXISTS questions;
+CREATE TABLE questions (
+    id INT UNSIGNED NOT NULL PRIMARY KEY,
+    text VARCHAR(64) NOT NULL,
+    FOREIGN KEY (quiz_id) INT REFERENCES quizzes(id)
+);
+
+DROP TABLE IF EXISTS answers;
+CREATE TABLE answers (
+    id INT UNSIGNED NOT NULL PRIMARY KEY,
+    text VARCHAR(64) NOT NULL,
+    question_id INT UNSIGNED NOT NULL,
+    is_correct INT NOT NULL,
+    FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+
+DROP TABLE IF EXISTS scores;
+CREATE TABLE scores (
+    user_id INT UNSIGNED NOT NULL,
+    quiz_id INT UNSIGNED NOT NULL,
+    score INT UNSIGNED NOT NULL,
+    PRIMARY KEY(user_id, quiz_id)
+);

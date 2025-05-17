@@ -3,7 +3,7 @@
 const DB_SERVER = 'localhost';
 const DB_USERNAME = 'root';
 const DB_PASSWORD = '';
-const DB_NAME = 'login_demo';
+const DB_NAME = '';
 
 function getDB() {
     // Return DB connection

@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
 </head>
 <body>
-<div class="wrapper">
+<div class="login-register-wrapper">
     <h2>Log In</h2>
     <p>Please fill out this form to log in</p>
     <?php if(!empty($login_err)): ?>

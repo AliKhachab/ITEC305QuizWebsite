@@ -1,9 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
+    if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
     header("location:index.php");
     exit;
-}
+}   // maybe we route to quiz select? maybe this is quiz select? it depends...
+    // if we are doing one quiz, style it different, but for two quizzes we need a form to pick. also potentially check if the user has a score and display their highest score?
 ?>
 
 <!doctype html>

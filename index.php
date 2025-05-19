@@ -1,7 +1,5 @@
 <?php
-
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,5 +14,11 @@
 </head>
 <body>
     <!-- Just a quick landing page to explain that this is a quiz website? Maybe some screenshots etc...-->
+    <h1>Welcome to our (topic) quiz website!</h1>
+    <div class="btn-group" role="group">
+        <a class="btn btn-primary" href="login.php">Login</a>
+        <a class="btn btn-dark" href="register.php">Register</a>
+    </div>
+    <footer><small>Created by David Cano, Ali Khachab, Alan Yuan for ITEC305 @ NYIT.</small></footer>
 </body>
 </html>

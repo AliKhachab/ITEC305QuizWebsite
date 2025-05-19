@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     else
     {
         //Search the database for it
-        $sql = "Select id from users where username = :username";
+        $sql = "Select id from users where name = :username";
         if($stmt= $db->prepare($sql))
         {
             $stmt->bindParam(":username", $param_username);
@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if(empty($username_err) && empty($pw_err) && empty($confirm_pw_err))
     {
         //here we can add the user into the database
-        $sql = "Insert into users (username, password) VALUE (:username, :password)";
+        $sql = "Insert into users (name, password) VALUE (:username, :password)";
         if($stmt= $db->prepare($sql))
         {
             $stmt->bindParam(":username", $param_username);
@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $hashedpass = password_hash($password, PASSWORD_DEFAULT);
             if($stmt->execute())
             {
-                //it worked. User should be in database!
+                //it worked. User should be in database
                 header("location: login.php");
             }
             else{

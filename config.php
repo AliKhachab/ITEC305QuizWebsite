@@ -3,7 +3,7 @@
 const DB_SERVER = 'localhost';
 const DB_USERNAME = 'root';
 const DB_PASSWORD = '';
-const DB_NAME = '';
+const DB_NAME = 'quiz';
 
 function getDB() {
     // Return DB connection
@@ -14,8 +14,4 @@ function getDB() {
     } catch (PDOException $e) {
         die("Error: Could not connect. {$e->getMessage()}");
     }
-
 }
-
-?>
-

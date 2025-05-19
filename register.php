@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else if(strlen(trim($_POST["password"]))<8)
     {
-        $pw_err = "Pw not long enough!Must be more than 8 characters!";
+        $pw_err = "Your password is not long enough. Please make it 8 characters or longer.";
     }
     else
     {

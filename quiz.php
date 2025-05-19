@@ -1,0 +1,1 @@
+<?php // sql queries to actually grab questions and make the quiz

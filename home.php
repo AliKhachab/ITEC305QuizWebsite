@@ -6,15 +6,21 @@ if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
 }
 require_once "config.php";
 $db = getDB();
-
-$sql = "select id, name from quizzes";
-if ($sql->execute()) {
-
+$quizzes = array();
+try {
+    $sql = "SELECT id, name FROM quizzes";
+    $stmt = $db->prepare($sql);
+    if ($stmt->execute()) {
+        // $quizzes = fetch all the rows from the statement
+        //... continue from here
+    } else {
+        throw new PDOException("Statement didn't execute.");
+    }
+} catch (PDOException $e) {
+    die("Error getting quiz data. ".$e->getMessage());
 }
 
 
-// maybe we route to quiz select? maybe this is quiz select? it depends...
-// if we are doing one quiz, style it different, but for two quizzes we need a form to pick. also potentially check if the user has a score and display their highest score?
 ?>
 
 <!doctype html>
@@ -24,6 +30,7 @@ if ($sql->execute()) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="home.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Home</title>
@@ -36,8 +43,8 @@ if ($sql->execute()) {
         <div class="btn-group me-2" role="group" aria-label="Second group">
             <a class="btn btn-info" role="button">First quiz</a>
             <a class="btn btn-info" role="button">Second quiz</a>
+            <!-- change these buttons so that it reads quiz names from the above array we pulled using the sql query-->
         </div>
     </div>
-
 </body>
 </html>

@@ -12,7 +12,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>ITEC305 Quiz App</title>
 </head>
-<body>
+<main>
     <!-- Just a quick landing page to explain that this is a quiz website? Maybe some screenshots etc...-->
     <h1>Welcome to our (topic) quiz website!</h1>
     <div class="btn-group" role="group">
@@ -20,5 +20,6 @@
         <a class="btn btn-dark" href="register.php">Register</a>
     </div>
     <footer><small>Created by David Cano, Ali Khachab, Alan Yuan for ITEC305 @ NYIT.</small></footer>
-</body>
+
+</main>
 </html>

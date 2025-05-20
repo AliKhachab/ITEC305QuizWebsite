@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($username_err) && empty($pw_err)) {
         $sql = "Select id, name, password from users where name = :username"; //make the statement
-        if ($stmt = $db->prepare($sql)) { //preparing it to run as sql
+            if ($stmt = $db->prepare($sql)) { //preparing it to run as sql
             $stmt->bindParam(":username", $param_username);
             $param_username = trim($username);//inserting the variable into the statement securely
             if ($stmt->execute()) //executing the statement in the db

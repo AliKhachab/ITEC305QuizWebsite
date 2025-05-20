@@ -1,10 +1,20 @@
 <?php
 session_start();
-    if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
+if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
     header("location:index.php");
     exit;
-}   // maybe we route to quiz select? maybe this is quiz select? it depends...
-    // if we are doing one quiz, style it different, but for two quizzes we need a form to pick. also potentially check if the user has a score and display their highest score?
+}
+require_once "config.php";
+$db = getDB();
+
+$sql = "select id, name from quizzes";
+if ($sql->execute()) {
+
+}
+
+
+// maybe we route to quiz select? maybe this is quiz select? it depends...
+// if we are doing one quiz, style it different, but for two quizzes we need a form to pick. also potentially check if the user has a score and display their highest score?
 ?>
 
 <!doctype html>
@@ -19,6 +29,15 @@ session_start();
     <title>Home</title>
 </head>
 <body>
-    <a class="btn btn-danger" role="button" href="logout.php">Log out</a>
+    <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <a class="btn btn-danger" role="button" href="logout.php">Log out</a>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="Second group">
+            <a class="btn btn-info" role="button">First quiz</a>
+            <a class="btn btn-info" role="button">Second quiz</a>
+        </div>
+    </div>
+
 </body>
 </html>

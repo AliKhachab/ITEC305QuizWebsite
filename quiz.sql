@@ -1,7 +1,9 @@
+/* CREATE DATABASE */
 DROP DATABASE IF EXISTS quiz;
 CREATE DATABASE quiz;
 USE quiz;
 
+/* CREATE TABLES */
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -39,3 +41,12 @@ CREATE TABLE scores (
     score INT UNSIGNED NOT NULL,
     PRIMARY KEY(user_id, quiz_id)
 );
+
+/* CREATE QUIZZES */
+
+INSERT INTO quizzes
+VALUES
+    (1, 'Quiz 1 Temp Name'),
+    (2, 'Quiz 2 Temp Name');
+
+/* CREATE SAMPLE QUESTIONS*/

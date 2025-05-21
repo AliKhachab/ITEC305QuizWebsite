@@ -7,10 +7,15 @@ if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
 require_once "config.php";
 $db = getDB();
 
-$sql = "select id, name from quizzes";
-if ($sql->execute()) {
-
+try {
+    $sql = "SELECT id, name FROM quizzes";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $quizzes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("No quizzes exist " . $e->getMessage());
 }
+
 
 
 // maybe we route to quiz select? maybe this is quiz select? it depends...
@@ -34,10 +39,12 @@ if ($sql->execute()) {
             <a class="btn btn-danger" role="button" href="logout.php">Log out</a>
         </div>
         <div class="btn-group me-2" role="group" aria-label="Second group">
-            <a class="btn btn-info" role="button">First quiz</a>
-            <a class="btn btn-info" role="button">Second quiz</a>
+            <?php foreach($quizzes as $quiz): ?>
+                <a class="btn btn-info" role="button" href="quiz.php?id=<?= $quiz['id'] ?>">
+                    <?= $quiz['name'] ?>
+                </a>
+            <?php endforeach; ?>
         </div>
     </div>
-
 </body>
 </html>

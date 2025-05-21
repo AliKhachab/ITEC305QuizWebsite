@@ -53,7 +53,7 @@ VALUES
 
 INSERT INTO questions
 VALUES
-    (1, 'What is the capital of Mexico?', 1),
+    (1, 'What is the capital of Mexico?', 1 ),
     (2, 'What is the capital of Lebanon?', 1),
     (3, 'What is the capital of Egypt?', 1),
     (4, 'What is the capital of Colombia?', 1),
@@ -72,32 +72,61 @@ VALUES
 INSERT INTO answers
 VALUES
     (1, 'Mexico City', 1, 1),
+    (2, 'Guadalajara', 1, 0),
+    (3,'Tijuana', 1, 0),
+
     (4, 'Beirut', 2, 1),
+    (5, 'Tripoli', 2, 0),
+    (6, 'Sidon', 2, 0),
+
     (7, 'Cairo', 3, 1),
+    (8, 'Alexandria', 3, 0),
+    (9, 'Giza', 3, 0),
+
     (10, 'Bogota', 4, 1),
-    (13,'Guatemala City', 5, 1),
+    (11, 'Medellin', 4, 0),
+    (12, 'Cali', 4, 0),
+
+    (13, 'Guatemala City', 5, 1),
+    (14, 'Quetzaltenango', 5, 0),
+    (15, 'Escuintla', 5, 0),
+
     (16, 'Santo Domingo', 6, 1),
-    (19,'Paris', 7 , 1),
+    (17, 'Punta Cana', 6, 0),
+    (18, 'La Romana', 6, 0),
+
+    (19, 'Paris', 7, 1),
+    (20, 'Lyon', 7, 0),
+    (21, 'Nice', 7, 0),
+
     (22, 'Kingston', 8, 1),
+    (23, 'Montego Bay', 8, 0),
+    (24, 'Spanish Town', 8, 0),
+
     (25, 'Malé', 9, 1),
+    (26, 'Addu City', 9, 0),
+    (27, 'Fuvahmulah', 9, 0),
+
     (28, 'Madrid', 10, 1),
-    (31, 'Washington DC', 11, 1),
+    (29, 'Barcelona', 10, 0),
+    (30, 'Seville', 10, 0),
+
+    (31, 'Washington, D.C.', 11, 1),
+    (32, 'New York City', 11, 0),
+    (33, 'Virginia', 11, 0),
+
     (34, 'Rome', 12, 1),
-    (37, 'Istanbul', 13, 1),
+    (35, 'Milan', 12, 0),
+    (36, 'Sicilly', 12, 0),
+
+    (37, 'Antalya', 13, 1),
+    (38, 'Istanbul', 13, 0),
+    (39, 'Izmir', 13, 0),
+
     (40, 'Seoul', 14, 1),
-    (43, 'Ottawa', 15, 1);
+    (41, 'Busan', 14, 0),
+    (42, 'Incheon', 14, 0),
 
-
-INSERT INTO scores
-VALUES
-    (1,1,6),
-    (2,1,7),
-    (3,1,8),
-    (4,1,5);
-
-INSERT INTO users
-VALUES
-    (1,'Bob','123'),
-    (2,'Bobby','123'),
-    (3,'BobE','123'),
-    (4,'BobC','123');
+    (43, 'Ottawa', 15, 1),
+    (44, 'Toronto', 15, 0),
+    (45, 'Montreal', 15, 0);

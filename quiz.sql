@@ -105,7 +105,7 @@ VALUES
 
     (25, 'Malé', 9, 1),
     (26, 'Addu City', 9, 0),
-    (27, 'Fuvahmulah', 9, 0)
+    (27, 'Fuvahmulah', 9, 0),
 
     (28, 'Madrid', 10, 1),
     (29, 'Barcelona', 10, 0),

@@ -129,4 +129,4 @@ VALUES
 
     (43, 'Ottawa', 15, 1),
     (44, 'Toronto', 15, 0),
-    (45, 'Montreal', 15, 0)
+    (45, 'Montreal', 15, 0);

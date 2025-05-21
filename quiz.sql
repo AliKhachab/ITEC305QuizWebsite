@@ -62,28 +62,41 @@ VALUES
     (7, "What is the capital of France?", 1),
     (8, "What is the capital of Jamaica?", 1),
     (9, "What is the capital of the Maldives?", 1),
-    (10, "What is the capital of Spain?",1);
+    (10, "What is the capital of Spain?",1),
+    (11, "What is the capital of the United States?", 1),
+    (12, "What is the capital of Italy?", 1),
+    (13, "What is the capital of Turkey?", 1),
+    (14, "What is the capital of South Korea?", 1),
+    (15, "What is the capital of Canada?", 1);
 
 INSERT INTO answers
 VALUES
     (1, "Mexico City", 1, true),
 
-    (5, "Beirut", 2, true),
+    (4, "Beirut", 2, true),
 
-    (9, "Cairo", 3, true),
+    (7, "Cairo", 3, true),
 
-    (13, "Bogota", 4, true),
+    (10, "Bogota", 4, true),
 
-    (17,"Guatemala City", 5, true),
+    (13,"Guatemala City", 5, true),
 
-    (21, "Santo Domingo", 6, true),
+    (16, "Santo Domingo", 6, true),
 
-    (25,"Paris", 7 , true),
+    (19,"Paris", 7 , true),
 
-    (29, "Kingston", 8, true),
+    (22, "Kingston", 8, true),
 
-    (33, "Malé", 9, true),
+    (25, "Malé", 9, true),
 
-    (37, "Madrid", 10, true),
+    (28, "Madrid", 10, true),
 
-    (40, "_", 10, false);
+    (31, "Washington DC", 11, true),
+
+    (34, "Rome", 12, true),
+
+    (37, "Istanbul", 13, true),
+
+    (40, "Seoul", 14, true),
+
+    (43, "Ottawa", 15, true);

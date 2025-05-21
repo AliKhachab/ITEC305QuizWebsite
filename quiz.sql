@@ -63,3 +63,27 @@ VALUES
     (8, "What is the capital of Jamaica?", 1),
     (9, "What is the capital of the Maldives?", 1),
     (10, "What is the capital of Spain?",1);
+
+INSERT INTO answers
+VALUES
+    (1, "Mexico City", 1, true),
+
+    (5, "Beirut", 2, true),
+
+    (9, "Cairo", 3, true),
+
+    (13, "Bogota", 4, true),
+
+    (17,"Guatemala City", 5, true),
+
+    (21, "Santo Domingo", 6, true),
+
+    (25,"Paris", 7 , true),
+
+    (29, "Kingston", 8, true),
+
+    (33, "Malé", 9, true),
+
+    (37, "Madrid", 10, true),
+
+    (40, "_", 10, false);

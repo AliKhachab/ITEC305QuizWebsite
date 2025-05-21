@@ -106,3 +106,27 @@ VALUES
     (25, 'Malé', 9, 1),
     (26, 'Addu City', 9, 0),
     (27, 'Fuvahmulah', 9, 0)
+
+    (28, 'Madrid', 10, 1),
+    (29, 'Barcelona', 10, 0),
+    (30, 'Seville', 10, 0),
+
+    (31, 'Washington, D.C.', 11, 1),
+    (32, 'New York City', 11, 0),
+    (33, 'Virginia', 11, 0),
+
+    (34, 'Rome', 12, 1),
+    (35, 'Milan', 12, 0),
+    (36, 'Sicilly', 12, 0),
+
+    (37, 'Antalya', 13, 1),
+    (38, 'Istanbul', 13, 0),
+    (39, 'Izmir', 13, 0),
+
+    (40, 'Seoul', 14, 1),
+    (41, 'Busan', 14, 0),
+    (42, 'Incheon', 14, 0),
+
+    (43, 'Ottawa', 15, 1),
+    (44, 'Toronto', 15, 0),
+    (45, 'Montreal', 15, 0)

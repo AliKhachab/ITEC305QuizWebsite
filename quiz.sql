@@ -71,32 +71,18 @@ VALUES
 
 INSERT INTO answers
 VALUES
-    (1, 'Mexico City', 1, true),
-
-    (4, 'Beirut', 2, true),
-
-    (7, 'Cairo', 3, true),
-
-    (10, 'Bogota', 4, true),
-
-    (13,'Guatemala City', 5, true),
-
-    (16, 'Santo Domingo', 6, true),
-
-    (19,'Paris', 7 , true),
-
-    (22, 'Kingston', 8, true),
-
-    (25, 'Malé', 9, true),
-
-    (28, 'Madrid', 10, true),
-
-    (31, 'Washington DC', 11, true),
-
-    (34, 'Rome', 12, true),
-
-    (37, 'Istanbul', 13, true),
-
-    (40, 'Seoul', 14, true),
-
-    (43, 'Ottawa', 15, true);
+    (1, 'Mexico City', 1, 1),
+    (4, 'Beirut', 2, 1),
+    (7, 'Cairo', 3, 1),
+    (10, 'Bogota', 4, 1),
+    (13,'Guatemala City', 5, 1),
+    (16, 'Santo Domingo', 6, 1),
+    (19,'Paris', 7 , 1),
+    (22, 'Kingston', 8, 1),
+    (25, 'Malé', 9, 1),
+    (28, 'Madrid', 10, 1),
+    (31, 'Washington DC', 11, 1),
+    (34, 'Rome', 12, 1),
+    (37, 'Istanbul', 13, 1),
+    (40, 'Seoul', 14, 1),
+    (43, 'Ottawa', 15, 1);

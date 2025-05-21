@@ -46,7 +46,20 @@ CREATE TABLE scores (
 
 INSERT INTO quizzes
 VALUES
-    (1, 'Quiz 1 Temp Name'),
+    (1, 'Capitals of the World'),
     (2, 'Quiz 2 Temp Name');
 
 /* CREATE SAMPLE QUESTIONS*/
+
+INSERT INTO questions
+VALUES
+    (1, "What is the capital of Mexico?", 1 ),
+    (2, "What is the capital of Lebanon?", 1),
+    (3, "What is the capital of Egypt?", 1),
+    (4, "What is the capital of Colombia?", 1),
+    (5, "What is the capital of Guatemala?", 1),
+    (6, "What is the capital of the Dominican Republic?", 1),
+    (7, "What is the capital of France?", 1),
+    (8, "What is the capital of Jamaica?", 1),
+    (9, "What is the capital of the Maldives?", 1),
+    (10, "What is the capital of Spain?",1);

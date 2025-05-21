@@ -100,3 +100,17 @@ VALUES
     (40, "Seoul", 14, true),
 
     (43, "Ottawa", 15, true);
+
+INSERT INTO scores
+VALUES
+    (1,1,6),
+    (2,1,7),
+    (3,1,8),
+    (4,1,5);
+
+INSERT INTO users
+VALUES
+    (1,"Bob","123"),
+    (2,"Bobby","123"),
+    (3,"BobE","123"),
+    (4,"BobC","123");

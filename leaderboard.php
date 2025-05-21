@@ -1,9 +1,8 @@
 <?php
-$hostname = "mysql:dbname=quiz;host=localhost";
-$username = "root";
-$pw = "";
+require_once "config.php";
+$db = getDB();
 
-//Query to get top 10 highest scores with user names and quiz names
+//Query to get top 10 highest scores with usernames and quiz names
 $query = "SELECT u.name AS user_name, s.score, q.name AS quiz_name
               FROM scores s
               JOIN users u ON s.user_id = u.id
@@ -11,7 +10,7 @@ $query = "SELECT u.name AS user_name, s.score, q.name AS quiz_name
               ORDER BY s.score DESC
               LIMIT 10";
 
-$db = new PDO($hostname, $username, $pw);
+
 $rows = $db->query($query);
 ?>
 <!doctype html>

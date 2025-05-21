@@ -53,7 +53,7 @@ VALUES
 
 INSERT INTO questions
 VALUES
-    (1, 'What is the capital of Mexico?', 1 ),
+    (1, 'What is the capital of Mexico?', 1),
     (2, 'What is the capital of Lebanon?', 1),
     (3, 'What is the capital of Egypt?', 1),
     (4, 'What is the capital of Colombia?', 1),
@@ -86,3 +86,18 @@ VALUES
     (37, 'Istanbul', 13, 1),
     (40, 'Seoul', 14, 1),
     (43, 'Ottawa', 15, 1);
+
+
+INSERT INTO scores
+VALUES
+    (1,1,6),
+    (2,1,7),
+    (3,1,8),
+    (4,1,5);
+
+INSERT INTO users
+VALUES
+    (1,'Bob','123'),
+    (2,'Bobby','123'),
+    (3,'BobE','123'),
+    (4,'BobC','123');

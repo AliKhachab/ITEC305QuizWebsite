@@ -72,17 +72,37 @@ VALUES
 INSERT INTO answers
 VALUES
     (1, 'Mexico City', 1, 1),
+    (2, 'Guadalajara', 1, 0),
+    (3,'Tijuana', 1, 0),
+
     (4, 'Beirut', 2, 1),
+    (5, 'Tripoli', 2, 0),
+    (6, 'Sidon', 2, 0),
+
     (7, 'Cairo', 3, 1),
+    (8, 'Alexandria', 3, 0),
+    (9, 'Giza', 3, 0),
+
     (10, 'Bogota', 4, 1),
-    (13,'Guatemala City', 5, 1),
+    (11, 'Medellin', 4, 0),
+    (12, 'Cali', 4, 0),
+
+    (13, 'Guatemala City', 5, 1),
+    (14, 'Quetzaltenango', 5, 0),
+    (15, 'Escuintla', 5, 0),
+
     (16, 'Santo Domingo', 6, 1),
-    (19,'Paris', 7 , 1),
+    (17, 'Punta Cana', 6, 0),
+    (18, 'La Romana', 6, 0),
+
+    (19, 'Paris', 7, 1),
+    (20, 'Lyon', 7, 0),
+    (21, 'Nice', 7, 0),
+
     (22, 'Kingston', 8, 1),
+    (23, 'Montego Bay', 8, 0),
+    (24, 'Spanish Town', 8, 0),
+
     (25, 'Malé', 9, 1),
-    (28, 'Madrid', 10, 1),
-    (31, 'Washington DC', 11, 1),
-    (34, 'Rome', 12, 1),
-    (37, 'Istanbul', 13, 1),
-    (40, 'Seoul', 14, 1),
-    (43, 'Ottawa', 15, 1);
+    (26, 'Addu City', 9, 0),
+    (27, 'Fuvahmulah', 9, 0)

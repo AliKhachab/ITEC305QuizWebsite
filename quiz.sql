@@ -72,31 +72,63 @@ VALUES
 INSERT INTO answers
 VALUES
     (1, 'Mexico City', 1, true),
+    (2, 'Guadalajara', 1, false),
+    (3, 'Monterrey', 1, false),
+
 
     (4, 'Beirut', 2, true),
+    (5, 'Sidon', 2, false),
+    (6, 'Tyre', 2, false),
 
     (7, 'Cairo', 3, true),
+    (8, 'Luxor', 3, false),
+    (9, 'Giza', 3, false),
 
     (10, 'Bogota', 4, true),
+    (11, 'Medellin', 4,false),
+    (12, 'Cali', 4, false),
 
     (13,'Guatemala City', 5, true),
+    (14, 'Quetzaltenango', 5, false),
+    (15, 'Antigua Guatemala', 5, false),
 
     (16, 'Santo Domingo', 6, true),
+    (17, 'Santiago', 6, false),
+    (18,'Punta Cana', 6, false),
+
 
     (19,'Paris', 7 , true),
+    (20, 'Lille', 7, false),
+    (21,'Nice', 7, false),
 
     (22, 'Kingston', 8, true),
+    (23, 'Portmeo City', 8, false),
+    (24, 'Monetgo Bay', 8, false),
 
     (25, 'Malé', 9, true),
+    (26, 'Maldives City', 9, false),
+    (27, 'The Maldives', 9, false),
 
     (28, 'Madrid', 10, true),
+    (29, 'Barcelona', 10, false),
+    (30, 'Seville', 10, false),
 
     (31, 'Washington DC', 11, true),
+    (32, 'New York', 11, false),
+    (33, 'Virginia', 11, false),
 
     (34, 'Rome', 12, true),
+    (35, 'Sicilly', 12, false),
+    (36, 'Vatican City', 12, false),
 
     (37, 'Istanbul', 13, true),
+    (38,'İzmir', 13, false),
+    (39,'Antalya', 13, false),
 
     (40, 'Seoul', 14, true),
+    (41, 'Busan', 14, false),
+    (42, 'Ulsan', 14, false),
 
-    (43, 'Ottawa', 15, true);
+    (43, 'Ottawa', 15, true),
+    (44,'Toronto', 15, false),
+    (45, 'Montreal', 15, false);

@@ -100,4 +100,3 @@ VALUES
     (40, "Seoul", 14, true),
 
     (43, "Ottawa", 15, true);
-

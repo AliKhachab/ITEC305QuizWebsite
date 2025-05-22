@@ -10,7 +10,6 @@ $query = "SELECT u.name AS user_name, s.score, q.name AS quiz_name
               ORDER BY s.score DESC
               LIMIT 10";
 
-
 $rows = $db->query($query);
 ?>
 <!doctype html>

@@ -23,3 +23,31 @@ body {
     color: hotpink;
 }
 
+.prompt{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: deeppink;
+}
+
+.photo-creds{
+    color: navajowhite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card-body {
+    background: linear-gradient(to right, rgba(14, 37, 183, 0.3), rgba(18, 48, 115, 0.57));
+}
+
+.btn-start{
+    background-color: orange;
+    color: white;
+    border-color: white;
+}
+
+.btn-start:hover{
+    background-color: #ce9830;
+    border-color: white;
+}

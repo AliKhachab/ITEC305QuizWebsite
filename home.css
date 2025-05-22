@@ -27,7 +27,8 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    color: deeppink;
+    color: white;
+    padding-top: 20px;
 }
 
 .photo-creds{
@@ -38,16 +39,15 @@ body {
 }
 
 .card-body {
-    background: linear-gradient(to right, rgba(14, 37, 183, 0.3), rgba(18, 48, 115, 0.57));
+    background: darkorange;
 }
-
 .btn-start{
-    background-color: orange;
+    background-color: palevioletred;
     color: white;
     border-color: white;
 }
 
 .btn-start:hover{
-    background-color: #ce9830;
+    background-color: cornflowerblue;
     border-color: white;
 }

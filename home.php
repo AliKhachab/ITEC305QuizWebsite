@@ -41,7 +41,7 @@ try {
     <div class="btn-group me-2" role="group" aria-label="Second group">
         <?php foreach($quizzes as $quiz): ?>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
+                <div class="h-100 card">
                     <div class="card-body">
                         <h5 class="card-title"><?=($quiz['name'])?></h5>
                         <?php

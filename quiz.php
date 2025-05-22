@@ -17,7 +17,7 @@ function getQuestions($numQuestions, $selected_quiz_type, $database) {
         if ($stmt = $database->prepare($sql)) {
             $stmt->bindParam(":selected_quiz_type", $_POST['quiz_id']);
             if ($stmt->execute()) {
-                $questions_assoc_array = $stmt->fetch_all(PDO::FETCH_ASSOC);
+                $questions_assoc_array = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
                 throw new PDOException("Database execute error");
             }
@@ -32,6 +32,7 @@ function getQuestions($numQuestions, $selected_quiz_type, $database) {
 
 $questions = getQuestions(MAX_QUESTIONS, 1, $db);
 
+print_r($questions);
 
 ?>
 <!doctype html>

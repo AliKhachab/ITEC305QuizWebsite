@@ -7,33 +7,36 @@ body {
     height: 50vh;
     margin: 0;
 
-
-    .main {
-        width: 400px;
-    }
-
-    .main-header {
-        color: ghostwhite;
-        text-align: center;
-
-    }
-
-    .btn-container {
-        border: 2px solid white;
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    .btn-login {
-        background-color: orange;
-    }
-
-
-    .btn-register {
-        background-color: palevioletred;
-    }
-
-    .credits {
-        color: white;
-    }
 }
+.main {
+    width: 400px;
+}
+
+.main-header {
+    color: ghostwhite;
+    text-align: center;
+    width: 400px;
+}
+
+.btn-container {
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.btn-login {
+    background-color: orange !important;
+    z-index: 1;
+}
+
+
+.btn-register {
+    background-color: palevioletred !important;
+    z-index: 1;
+}
+
+.credits {
+    color: white;
+}
+

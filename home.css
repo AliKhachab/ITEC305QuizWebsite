@@ -23,3 +23,31 @@ body {
     color: hotpink;
 }
 
+.prompt{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: white;
+    padding-top: 20px;
+}
+
+.photo-creds{
+    color: navajowhite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card-body {
+    background: darkorange;
+}
+.btn-start{
+    background-color: palevioletred;
+    color: white;
+    border-color: white;
+}
+
+.btn-start:hover{
+    background-color: cornflowerblue;
+    border-color: white;
+}

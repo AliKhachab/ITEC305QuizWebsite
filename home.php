@@ -23,7 +23,7 @@ try {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -36,17 +36,35 @@ try {
 </head>
 <body>
 <a class="btn btn-logout" role="button" href="logout.php">Log out</a>
+<h2 class ="prompt">Choose Your Quiz</h2>
 <div class="btn-toolbar" role="toolbar">
     <div class="btn-group me-2" role="group" aria-label="Second group">
         <?php foreach($quizzes as $quiz): ?>
-            <form method="post" action="quiz.php">
-                <input type="hidden" name="quiz_id" value="<?= $quiz['id'] ?>">
-                <button type="submit" class="btn btn-info"><?= $quiz['name'] ?></button>
-            </form>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="h-100 card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?=($quiz['name'])?></h5>
+                        <?php
+                        $description = "";
+                        if ($quiz['id'] == 1) {
+                            $description = "Explore the World! Know your Cities and Capitals!";
+                        } elseif ($quiz['id'] == 2) {
+                            $description= "Gotta Catch em All!";
+                        }
+                        ?>
+                        <p class="card-text"><?= $description ?></p>
+                        <form method="post" action="quiz.php">
+                            <input type="hidden" name="quiz_id" value="<?= $quiz['id'] ?>">
+                            <button type="submit" class="btn btn-primary btn-start">Start Quiz</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         <?php endforeach; ?>
         <div class="btn-group me-2" role="group" aria-label="First group">
         </div>
     </div>
+    <footer class="photo-creds"<small>Image by robokoboto</small>
 </div>
 </body>
 </html>

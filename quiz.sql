@@ -53,7 +53,7 @@ VALUES
 
 INSERT INTO questions
 VALUES
-    (1, 'What is the capital of Mexico?', 1 ),
+    (1, 'What is the capital of Mexico?', 1),
     (2, 'What is the capital of Lebanon?', 1),
     (3, 'What is the capital of Egypt?', 1),
     (4, 'What is the capital of Colombia?', 1),

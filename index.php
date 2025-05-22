@@ -22,6 +22,7 @@
         </div>
     </div>
     <footer class = "credits"><small>Created by David Cano, Ali Khachab, Alan Yuan for ITEC305 @ NYIT.</small></footer>
+    <footer class = "photo-creds position-absolute bottom-0 end-0"<small>Image by robokoboto</small>
 
 </main>
 </html>

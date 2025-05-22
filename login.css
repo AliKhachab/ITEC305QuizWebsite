@@ -1,0 +1,57 @@
+body {
+    background-image: url("https://i.ibb.co/kV6R5vJs/958554-final.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-register-wrapper {
+    width: 400px;
+    padding: 20px;
+}
+
+p{
+    color: white;
+}
+
+.username{
+    color: white;
+}
+
+.password{
+    color: white;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.link-register{
+    color: navajowhite;
+}
+
+.photo-creds{
+    color: navajowhite;
+
+}

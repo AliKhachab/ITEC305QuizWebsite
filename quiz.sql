@@ -95,7 +95,7 @@ VALUES
     (16, 'Santo Domingo', 6, 1), (17, 'Punta Cana', 6, 0), (18, 'La Romana', 6, 0),
     (19, 'Paris', 7, 1), (20, 'Lyon', 7, 0), (21, 'Nice', 7, 0),
     (22, 'Kingston', 8, 1), (23, 'Montego Bay', 8, 0), (24, 'Spanish Town', 8, 0),
-    (25, 'Malé', 9, 1), (26, 'Addu City', 9, 0), (27, 'Fuvahmulah', 9, 0),
+    (25, 'Malé',9, 1), (26, 'Addu City', 9, 0), (27, 'Fuvahmulah', 9, 0),
     (28, 'Madrid', 10, 1), (29, 'Barcelona', 10, 0), (30, 'Seville', 10, 0),
     (31, 'Washington, D.C.', 11, 1), (32, 'New York City', 11, 0), (33, 'Virginia', 11, 0),
     (34, 'Rome', 12, 1), (35, 'Milan', 12, 0), (36, 'Sicilly', 12, 0),

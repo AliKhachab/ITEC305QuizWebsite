@@ -4,6 +4,8 @@ if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
     header("location:index.php");
     exit;
 }
+//print_r($_POST);
+//print_r($questions);
 
 require_once "config.php";
 $db = getDB();
@@ -38,7 +40,6 @@ $questions = getQuestions(MAX_QUESTIONS, 1, $db);
     <title>Quiz</title>
 </head>
 <body>
-    <h1>Quiz</h1>
-    <?= print_r($questions); ?>
+<h1>Quiz</h1>
 </body>
 </html>

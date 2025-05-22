@@ -74,34 +74,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loginRegister.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
 <body>
 <div class="login-register-wrapper">
     <h2>Log In</h2>
-    <p>Please fill out this form to log in</p>
+    <p class = "login-instructions">Please fill out this form to log in</p>
     <?php if(!empty($login_err)): ?>
         <div class="alert alert-danger"><?= $login_err ?></div>
     <?php endif; ?>
     <form action="login.php" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" value="<?= $username?>">
+            <label class="username">Username</label>
+            <input placeholder="Enter your username..."  type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" value="<?= $username?>">
             <div class="invalid-feedback"><?= $username_err?></div>
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
+            <label class = "password">Password</label>
+            <input placeholder="Enter your password..." type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
                    name="password" value="<?= $password?>">
             <div class="invalid-feedback"><?= $pw_err?></div>
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
         </div>
-        <p>Don't have an account? <a href="register.php">Sign up now!</a></p>
+        <p>Don't have an account? <a class="link-register" href="register.php">Sign up now!</a></p>
     </form>
+    <footer class="photo-creds"<small>Image by robokoboto</small>
 </div>
 </body>
 </html>

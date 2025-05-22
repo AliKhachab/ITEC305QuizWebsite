@@ -1,0 +1,48 @@
+body {
+    background-image: url("https://i.ibb.co/kV6R5vJs/958554-final.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+}
+.main {
+    width: 400px;
+}
+
+.main-header {
+    color: ghostwhite;
+    text-align: center;
+    width: 400px;
+}
+
+.btn-container {
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.btn-login {
+    background-color: orange !important;
+    z-index: 1;
+}
+
+
+.btn-register {
+    background-color: palevioletred !important;
+    z-index: 1;
+}
+
+.credits {
+    color: white;
+}
+
+.photo-creds{
+    color: navajowhite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+

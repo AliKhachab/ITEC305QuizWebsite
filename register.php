@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
     <title>Register!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loginRegister.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -107,28 +107,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <p>Please fill out this form to create an account</p>
     <form action="register.php" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"" name="username" value="<?= $username?>"
+            <label class="username">Username</label>
+            <input placeholder="Enter your username..." type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"" name="username" value="<?= $username?>"
             >
             <span class="invalid_feedback"><?= $username_err?></span>
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
+            <label class="password">Password</label>
+            <input placeholder="Enter your password..." type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
                    name="password" value="<?= $password?>">
             <span class="invalid_feedback"><?= $pw_err?></span>
         </div>
         <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" class="form-control <?php echo (!empty($confirm_pw_err)) ? 'is-invalid' : ''; ?>" name="confirm_password" value="<?= $confirmpassword?>"
+            <label class="confirm-password">Confirm Password</label>
+            <input placeholder="Enter your password again..." type="password" class="form-control <?php echo (!empty($confirm_pw_err)) ? 'is-invalid' : ''; ?>" name="confirm_password" value="<?= $confirmpassword?>"
             >
             <span class="invalid_feedback"><?= $confirm_pw_err?></span>
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
         </div>
-        <p>Have an account? <a href="login.php">Log in here!</a></p>
+        <p>Have an account? <a class="link-register" href="login.php">Log in here!</a></p>
     </form>
+    <footer class="photo-creds"<small>Image by robokoboto</small>
 </div>
 </body>
 </html>

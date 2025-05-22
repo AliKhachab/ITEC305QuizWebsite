@@ -8,9 +8,20 @@ if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
 require_once "config.php";
 $db = getDB();
 
+if (!isset($_POST['quiz_id'])) {
+    die("A quiz must be selected please return to the homepage.");
+}
+
+
+$quiz_id = intval($_POST['quiz_id']);
+
+
 function getQuestions($numQuestions, $selected_quiz_type) {
     $questions_assoc_array = array();
+
+
     $sql = "SELECT id, text FROM questions WHERE quiz_id = :selected_quiz_type";
+
 
 
     return $questions_assoc_array;

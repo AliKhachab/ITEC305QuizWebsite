@@ -40,9 +40,10 @@ try {
     </div>
     <div class="btn-group me-2" role="group" aria-label="Second group">
         <?php foreach($quizzes as $quiz): ?>
-            <a class="btn btn-info" role="button" href="quiz.php?id=<?= $quiz['id'] ?>">
-                <?= $quiz['name'] ?>
-            </a>
+            <form method="post" action="quiz.php">
+                <input type="hidden" name="quiz_id" value="<?= $quiz['id'] ?>">
+                <button type="submit" class="btn btn-info"><?= $quiz['name'] ?></button>
+            </form>
         <?php endforeach; ?>
     </div>
 </div>

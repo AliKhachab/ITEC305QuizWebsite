@@ -107,28 +107,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <p>Please fill out this form to create an account</p>
     <form action="register.php" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"" name="username" value="<?= $username?>"
+            <label class="username">Username</label>
+            <input placeholder="Enter your username..." type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"" name="username" value="<?= $username?>"
             >
             <span class="invalid_feedback"><?= $username_err?></span>
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
+            <label class="password">Password</label>
+            <input placeholder="Enter your password..." type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
                    name="password" value="<?= $password?>">
             <span class="invalid_feedback"><?= $pw_err?></span>
         </div>
         <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" class="form-control <?php echo (!empty($confirm_pw_err)) ? 'is-invalid' : ''; ?>" name="confirm_password" value="<?= $confirmpassword?>"
+            <label class="confirm-password">Confirm Password</label>
+            <input placeholder="Enter your password again..." type="password" class="form-control <?php echo (!empty($confirm_pw_err)) ? 'is-invalid' : ''; ?>" name="confirm_password" value="<?= $confirmpassword?>"
             >
             <span class="invalid_feedback"><?= $confirm_pw_err?></span>
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
         </div>
-        <p>Have an account? <a href="login.php">Log in here!</a></p>
+        <p>Have an account? <a class="link-register" href="login.php">Log in here!</a></p>
     </form>
+    <footer class="photo-creds"<small>Image by robokoboto</small>
 </div>
 </body>
 </html>

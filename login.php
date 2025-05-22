@@ -81,27 +81,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="login-register-wrapper">
     <h2>Log In</h2>
-    <p>Please fill out this form to log in</p>
+    <p class = "login-instructions">Please fill out this form to log in</p>
     <?php if(!empty($login_err)): ?>
         <div class="alert alert-danger"><?= $login_err ?></div>
     <?php endif; ?>
     <form action="login.php" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" value="<?= $username?>">
+            <label class="username">Username</label>
+            <input placeholder="Enter your username..."  type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" value="<?= $username?>">
             <div class="invalid-feedback"><?= $username_err?></div>
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
+            <label class = "password">Password</label>
+            <input placeholder="Enter your password..." type="password" class="form-control <?php echo (!empty($pw_err)) ? 'is-invalid' : ''; ?>"
                    name="password" value="<?= $password?>">
             <div class="invalid-feedback"><?= $pw_err?></div>
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
         </div>
-        <p>Don't have an account? <a href="register.php">Sign up now!</a></p>
+        <p>Don't have an account? <a class="link-register" href="register.php">Sign up now!</a></p>
     </form>
+    <footer class="photo-creds"<small>Image by robokoboto</small>
 </div>
 </body>
 </html>

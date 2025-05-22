@@ -6,7 +6,6 @@ body {
     align-items: center;
     height: 50vh;
     margin: 0;
-
 }
 .main {
     width: 400px;
@@ -38,5 +37,12 @@ body {
 
 .credits {
     color: white;
+}
+
+.photo-creds{
+    color: navajowhite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 

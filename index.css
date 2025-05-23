@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 100vh;
     margin: 0;
 }
 .main {
@@ -48,4 +48,4 @@ body {
 
 .btn-register:hover, .btn-login:hover {
         background-color: #0056b3 !important;
-    }
+}

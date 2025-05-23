@@ -119,3 +119,19 @@ VALUES
     (82, 'TM64 Explosion', 28, 1), (83, 'TM12 Taunt', 28, 0), (84, 'TM36 Sludge Bomb', 28, 0),
     (85,'Headbutt', 29, 1), (86, 'Hydro Pump', 29,0), (87,'Future Sight', 29, 0),
     (88, 'Roaring Moon', 30, 1), (89, 'Iron Valiant', 30, 0), (90, 'Flutter Mane', 30, 0);
+
+
+INSERT INTO scores
+VALUES
+    (1,1,6),
+    (2,1,7),
+    (3,1,8),
+    (4,1,5);
+
+
+INSERT INTO users
+VALUES
+    (1,'Bob','123'),
+    (2,'Bobby','123'),
+    (3,'BobE','123'),
+    (4,'BobC','123');

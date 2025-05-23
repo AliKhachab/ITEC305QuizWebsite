@@ -87,6 +87,51 @@ foreach ($_POST as $key => $value) {
 // Calculate grade (out of 10)
 $grade_percentage = ($total_questions > 0) ? round(($correct_answers / $total_questions) * 100, 1) : 0;
 
+function updateBestScore($user_id, $quiz_id, $score, $db) {
+    // check if user has a score already. if they do, update it. if they do not, put their score in the db.
+    $sql = "SELECT score FROM scores WHERE user_id = :user_id AND quiz_id = :quiz_id";
+    try {
+        if ($stmt = $db->prepare($sql)) {
+            $stmt->bindParam(":user_id", $user_id);
+            $stmt->bindParam(":quiz_id", $quiz_id);
+            if ($stmt->execute()) {
+                if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // get the row if it exists
+                    $update_sql = "UPDATE scores SET score = :score WHERE user_id = :user_id AND quiz_id = :quiz_id";
+                    if ($update_stmt = $db->prepare($update_sql)) {
+                        $update_stmt->bindParam(":user_id", $user_id);
+                        $update_stmt->bindParam(":quiz_id", $quiz_id);
+                        $update_stmt->bindParam(":score", $score);
+                        if (!$update_stmt->execute()) {
+                            throw new PDOException("Error updating your score in the database.");
+                        }
+                    } else {
+                        throw new PDOException("Error preparing to update your score in the leaderboard.");
+                    }
+                } else { // row doesn't exist, insert into table as it's the user's only high score
+                    $insert_score_sql = "INSERT INTO scores (user_id, quiz_id, score) VALUES (:user_id, :quiz_id, :score)";
+                    if ($insert_stmt = $db->prepare($insert_score_sql)) {
+                        $insert_stmt->bindParam(":user_id", $user_id);
+                        $insert_stmt->bindParam(":quiz_id", $quiz_id);
+                        $insert_stmt->bindParam(":score", $score);
+                        if (!$insert_stmt->execute()) {
+                            throw new PDOException("Error inserting your score into the database.");
+                        }
+                    } else {
+                        throw new PDOException("Prepare insertion to scoreboard error.");
+                    }
+                }
+            } else {
+                throw new PDOException("Database execution error.");
+            }
+        } else {
+            throw new PDOException("Database preparation error.");
+        }
+    } catch (PDOException $e) {
+        die("Database error: " . $e->getMessage());
+    }
+}
+
+updateBestScore($_SESSION['id'], $_POST['quiz_id'], $correct_answers, $db);
 ?>
 
 <!doctype html>

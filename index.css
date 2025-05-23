@@ -46,3 +46,6 @@ body {
     right: 0;
 }
 
+.btn-register:hover, .btn-login:hover {
+        background-color: #0056b3 !important;
+    }

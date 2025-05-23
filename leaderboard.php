@@ -20,12 +20,12 @@ $rows = $db->query($query);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top 10 Quiz Scores</title>
+    <link href="leaderboard.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 <div class="container mt-4">
     <h1>Top 10 Quiz Scores</h1>
-
     <table class="table table-primary table-striped table-hover">
         <thead>
         <tr>
@@ -47,6 +47,7 @@ $rows = $db->query($query);
         <?php endforeach; ?>
         </tbody>
     </table>
+    <a href="home.php" class="nav-button">Take Another Quiz</a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

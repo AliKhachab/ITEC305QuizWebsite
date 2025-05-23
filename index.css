@@ -47,5 +47,6 @@ body {
 }
 
 .btn-register:hover, .btn-login:hover {
-        background-color: #0056b3 !important;
+    background-color: #0056b3 !important;
+    color: white !important;
 }
